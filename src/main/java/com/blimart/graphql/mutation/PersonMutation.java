@@ -17,8 +17,8 @@ public class PersonMutation implements GraphQLMutationResolver {
     @Autowired
     private PersonService personService;
 
-    public Person createPerson(final String name, final String job, final int salary) {
-        return this.personService.createPerson(name, job, salary);
+    public Person createPerson(final String personName, final String job, final String salary) {
+        return this.personService.createPerson(personName, job, salary);
     }
 
 }

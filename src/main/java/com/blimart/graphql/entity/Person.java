@@ -27,11 +27,11 @@ public class Person implements Serializable {
     private int id;
 
     @Column(name = "name", nullable = false)
-    private String name;
+    private String personName;
 
     @Column(name = "job")
     private String job;
 
     @Column(name = "salary")
-    private int salary;
+    private String salary;
 }

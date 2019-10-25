@@ -22,9 +22,9 @@ public class PersonService {
     }
 
     @Transactional
-    public Person createPerson(final String name, final String job, final int salary) {
+    public Person createPerson(final String personName, final String job, final String salary) {
         final Person person = new Person();
-        person.setName(name);
+        person.setPersonName(personName);
         person.setJob(job);
         person.setSalary(salary);
         return this.personRepository.save(person);

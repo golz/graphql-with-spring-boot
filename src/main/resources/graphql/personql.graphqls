@@ -1,0 +1,15 @@
+type Person {
+    id: ID!,
+    personName: String,
+    job: String,
+    salary: String
+}
+
+type Query {
+    persons(count: Int):[Person]
+    person(id: ID):Person
+}
+
+type Mutation {
+    createPerson(personName: String!, job: String, salary: String):Person
+}
