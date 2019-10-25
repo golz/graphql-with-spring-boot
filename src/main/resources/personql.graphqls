@@ -1,8 +1,13 @@
+/**
+GraphQL comes with its own language to write GraphQL Schemas called
+Schema Definition Language (SDL).
+The schema definition consists of all the API functionalities available at an endpoint.
+ */
 type Person {
     id: ID!,
     name: String,
     job: String,
-    salary: Double
+    salary: Int
 }
 
 type Query {
@@ -11,5 +16,5 @@ type Query {
 }
 
 type Mutation {
-    createPerson(name: String!, job: String, salary: Double):Person
+    createPerson(name: String!, job: String, salary: Int):Person
 }

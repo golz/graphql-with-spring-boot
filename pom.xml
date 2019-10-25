@@ -17,6 +17,8 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
     <dependencies>
@@ -29,16 +31,22 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <!-- GraphQL Dependencies -->
+        <!-- graphql-spring-boot-starter is used for enabling GraphQL servlet,
+             and it becomes available at a path /graphql. It initializes the GraphQLSchema bean.-->
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-spring-boot-starter</artifactId>
             <version>5.0.2</version>
         </dependency>
+        <!-- graphql-java allows us to write schema with GraphQL schema language,
+             which is simple to understand.-->
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-java-tools</artifactId>
             <version>5.2.4</version>
         </dependency>
+        <!-- graphiql-spring-boot-starter provides a user interface with which we could test
+             our GraphQL queries and view query definitions. -->
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphiql-spring-boot-starter</artifactId>
@@ -54,17 +62,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
 

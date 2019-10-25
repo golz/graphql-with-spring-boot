@@ -5,7 +5,6 @@ import com.blimart.graphql.repository.PersonRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -23,7 +22,7 @@ public class PersonService {
     }
 
     @Transactional
-    public Person createPerson(final String name, final String job, final BigDecimal salary) {
+    public Person createPerson(final String name, final String job, final int salary) {
         final Person person = new Person();
         person.setName(name);
         person.setJob(job);
